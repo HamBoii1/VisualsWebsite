@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+
+        .background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        .icons-container {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .icon {
+            margin: 0 20px;
+            color: white;
+            cursor: pointer;
+            font-size: 48px;
+        }
+
+        .icon:hover {
+            color: lightgray;
+        }
+
+        /* Additional styles for content */
+        .content {
+            padding: 20px;
+            color: white;
+            text-align: center;
+            margin-top: 150px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Initial video background -->
+    <video class="background-video" autoplay muted loop>
+        <source src="https://github.com/HamBoii1/3dModelsTest/raw/main/CelestialGalaxy0001-0658.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Icons container -->
+    <div class="icons-container">
+        <a href="https://www.apple.ca" target="_blank" class="icon"><i class="fab fa-apple"></i></a>
+        <a href="https://www.instagram.com" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com" target="_blank" class="icon"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <!-- Additional content to enable scrolling -->
+    <div class="content">
+        <h1>Scroll down to see the video change</h1>
+        <p>This is additional content to make the page scrollable. You can add more content here.</p>
+        <div style="height: 2000px;"></div> <!-- Temporary content for scrolling -->
+    </div>
+
+    <script>
+        var video = document.querySelector('.background-video');
+        var firstVideo = 'https://github.com/HamBoii1/3dModelsTest/raw/main/CelestialGalaxy0001-0658.mp4';
+        var secondVideo = 'https://github.com/HamBoii1/3dModelsTest/raw/main/CelestialButterflies0001-0658.mp4';
+
+        // Function to toggle video source based on scroll position
+        window.addEventListener('scroll', function() {
+            // Calculate halfway point of the page
+            var halfwayPoint = window.innerHeight / 2;
+
+            // Check if scroll position is past halfway point
+            if (window.scrollY > halfwayPoint) {
+                // Change video source to second video
+                if (video.src !== secondVideo) {
+                    video.src = secondVideo;
+                }
+            } else {
+                // Change video source to first video
+                if (video.src !== firstVideo) {
+                    video.src = firstVideo;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
