@@ -22,7 +22,7 @@
             height: 100%;
             object-fit: cover;
             z-index: -1;
-            opacity: 0; /* Initially hide all videos */
+            opacity: 1; /* Set opacity to 1 for the initial video */
             transition: opacity 0.5s ease; /* Smooth transition effect */
         }
 
@@ -51,23 +51,89 @@
             color: lightgray;
         }
 
+        /* Dropdown menu */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            display: block;
+            transition: background-color 0.3s;
+            border-radius: 5px; /* Add border radius */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         /* Styling for the content */
         .content {
             padding: 20px;
             color: white;
             text-align: center;
-            margin-top: 150px;
+            margin-top: 100px; /* Adjusted margin-top */
             font-size: 24px; /* Larger font size */
             font-weight: bold; /* Bold font weight */
             font-style: italic; /* Italic font style */
             text-transform: uppercase; /* Uppercase text */
+        }
+
+        .content p:nth-child(2) {
+            font-size: 18px; /* Smaller font size for the second line */
+        }
+
+        /* Styling for dropdown text boxes */
+        .dropdown-content input[type="text"] {
+            width: calc(100% - 20px);
+            margin: 5px 0;
+            padding: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: white;
+        }
+
+        /* Added styles for clickable links */
+        .dropdown-content a.button {
+            cursor: pointer;
+            background-color: #444;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        .dropdown-content a.button:hover {
+            background-color: #555;
         }
     </style>
 </head>
 <body>
     <!-- Video elements -->
     <video class="video" autoplay muted loop>
-        <source src="https://github.com/HamBoii1/3dModelsTest/raw/main/CelestialGalaxy0001-0658.mp4" type="video/mp4">
+        <source src="https://github.com/HamBoii1/3dModelsTest/raw/videos/CelestialGalaxy0001-0658.mp4" type="video/mp4">
         Your browser does not support the video tag.
     </video>
     <video class="video" autoplay muted loop>
@@ -85,7 +151,13 @@
 
     <!-- Icons container -->
     <div class="icons-container">
-        <a href="https://www.apple.ca" target="_blank" class="icon"><i class="fab fa-apple"></i></a>
+        <div class="dropdown">
+            <i class="fas fa-film icon"></i> <!-- Replaced with video reel icon -->
+            <div class="dropdown-content">
+                <a href="index.html" class="button" onclick="navigateTo('Celestial')">Celestial</a>
+                <a href="index2.html" class="button" onclick="navigateTo('KennyISO')">KennyISO</a>
+            </div>
+        </div>
         <a href="https://www.instagram.com" target="_blank" class="icon"><i class="fab fa-instagram"></i></a>
         <a href="https://twitter.com" target="_blank" class="icon"><i class="fab fa-twitter"></i></a>
     </div>
@@ -93,8 +165,7 @@
     <!-- Additional content -->
     <div class="content">
         <h1>Scroll down to see the video change</h1>
-        <p>This is additional content to make the page scrollable. You can add more content here.</p>
-        <p>Additional content...</p>
+        <p>Celestial Visuals</p>
         <!-- Add more content as needed -->
     </div>
 
@@ -130,6 +201,70 @@
     </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
