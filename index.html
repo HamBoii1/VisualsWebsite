@@ -128,6 +128,28 @@
         .dropdown-content a.button:hover {
             background-color: #555;
         }
+        /* Media query for mobile devices */
+        @media only screen and (max-width: 768px) {
+            .video {
+                object-fit: contain; /* Change object-fit to contain for mobile devices */
+            }
+
+            body {
+                background-image: url('still_frame_image.jpg'); /* Replace 'still_frame_image.jpg' with your image path */
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            .icons-container {
+                top: 10px;
+            }
+
+            .content {
+                margin-top: 50px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
